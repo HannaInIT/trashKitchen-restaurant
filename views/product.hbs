@@ -2,15 +2,21 @@
     <h1>{{title}}</h1>
 
     {{#if price}}
-        <h2>Price: {{price}}</h2>
+    <h2>Price: {{price}}</h2>
     {{else}}
-        <h2>Price upon request</h2>
+    <h2>Price upon request</h2>
     {{/if}}
 
 
+    {{#if isVeggie}}
+    <h2>Hallo I'm a veggie pizza 😊</h2>
+    {{else}}
+    <h2>I am not veggie 😒</h2>
+    {{/if}}
+
     <ul>
         {{#each ingredients}}
-            <li>{{this.ingredientName}}</li>
+        <li>{{this}}</li>
         {{/each}}
     </ul>
 
